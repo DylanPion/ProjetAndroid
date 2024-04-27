@@ -1,0 +1,75 @@
+[versions]
+agp = "8.3.1"
+kotlin = "1.9.0"
+coreKtx = "1.12.0"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+lifecycleRuntimeKtx = "2.7.0"
+lifecycleRuntimeCompose = "2.6.0-beta01"
+activityCompose = "1.8.2"
+composeBom = "2024.02.02"
+kotlinSerialization = "1.5.0"
+retrofit = "2.9.0"
+retrofitSerialization = "1.0.0"
+okHttp = "4.12.0"
+coil = "1.3.2"
+composeNavigation = "2.5.3"
+dagger = "2.40.5"
+daggerHilt = "2.44"
+timber = "4.7.1"
+paletteKtx = "1.0.0"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycleRuntimeCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+# Dépendances ajoutées
+
+# Android navigation compose pour utiliser la navigation avec compose
+androidx-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "composeNavigation" }
+# Coil de charger facilement une URL dans une image en compose
+coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+# Kotlin serialization pour permettre la sérialisation du JSON
+kotlin-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinSerialization" }
+# Retrofit va nous permettre de passer simplement des appels HTTP
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-scalars = { group = "com.squareup.retrofit2", name = "converter-scalars", version.ref = "retrofit" }
+retrofit-serialization = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofitSerialization" }
+# OkHttp logger pour permettre les logs avec Retrofit
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttp" }
+
+# Dagger pour la gestion des dépendances
+dagger = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
+daggerCompiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger" }
+# Dagger Hilt pour l'injection de dépendances
+daggerHiltAndroid = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHilt" }
+
+# Timber pour la gestion des logs
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+
+# Ajout de la dépendance Hilt Navigation Compose
+hiltNavigationCompose = { group = "androidx.hilt", name = "hilt-navigation-compose", version = "1.0.0-alpha03" }
+androidx-palette-ktx = { group = "androidx.palette", name = "palette-ktx", version.ref = "paletteKtx" }
+
+# Importation de CoilImage
+coilImage = { group = "com.google.accompanist.coil", name = "CoilImage", version.ref = "coil" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+#Plugin de kotlin serialization
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
